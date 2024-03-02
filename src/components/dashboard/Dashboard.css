@@ -1,0 +1,119 @@
+.dash-head {
+  box-shadow: 0px 0px 10px 1px grey;
+}
+.sideBar {
+  height: calc(100vh - 80px);
+  background-color: rgb(40, 39, 39);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  z-index: 10000;
+  left: 0;
+  transition: linear 0.2s;
+}
+.SideCon .arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 305px;
+  z-index: 1000;
+  transform: rotate(180deg);
+  top: 50px;
+  border-radius: 50%;
+  background-color: chartreuse;
+  color: rgb(40, 39, 39);
+  transition: linear 0.2s;
+}
+.sideBar a {
+  color: chartreuse;
+  font-size: 20px;
+  border-bottom: 1px solid rgb(71, 70, 70);
+  transition: 0.2s linear;
+  padding: 20px;
+}
+.sideBar a:hover {
+  padding-left: 30px;
+  background-color: rgb(71, 70, 70);
+}
+.active {
+  padding-left: 30px !important;
+  background-color: rgb(71, 70, 70);
+}
+.dash-head span {
+  color: chartreuse;
+}
+.table {
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+th {
+  color: chartreuse;
+  padding-left: 10px;
+}
+thead {
+  position: relative;
+}
+thead::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  box-shadow: 0px 1px 8px 0px chartreuse;
+}
+tr td {
+  color: white;
+  width: 30%;
+  padding: 10px;
+}
+tbody tr:first-child td {
+  padding-top: 20px;
+}
+tr {
+  position: relative;
+  padding: 5px 20px;
+  align-items: center;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(30, 29, 29);
+}
+
+table {
+  margin-top: 50px;
+  background-color: rgb(40, 39, 39);
+  width: 70%;
+}
+
+@media (max-width: 450px) {
+  .sideBar a {
+    padding: 20px 5px;
+  }
+  table {
+    width: 50%;
+    font-size: 15px;
+  }
+
+  .sideBar a:hover {
+    padding-left: 15px;
+    background-color: rgb(71, 70, 70);
+  }
+  .logout {
+    width: 125px;
+  }
+}
+@media (min-width: 660px) {
+  .table {
+    margin-right: 50px;
+  }
+}

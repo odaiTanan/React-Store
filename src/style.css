@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Almarai:wght@300;400;700;800&family=Kaushan+Script&family=Lobster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Almarai", sans-serif;
+  text-decoration: none;
+}
+header {
+  position: relative;
+}
+form {
+  position: relative;
+}
+.signin-continer {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 83px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+.signin-continer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 29, 30);
+  padding: 5px;
+  border-radius: 5px;
+  height: 520px;
+  z-index: 50;
+  width: 350px;
+}
+.signin-continer form label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.signin-continer form input {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  caret-color: chartreuse;
+  font-size: 20px;
+  background-color: transparent;
+  color: chartreuse;
+  border-bottom: 2px solid chartreuse;
+  transition: 0.2s linear;
+  border-right: 2px solid chartreuse;
+}
+::placeholder {
+  color: rgba(128, 255, 0, 0.732);
+}
+
+.signin-continer form input:focus {
+  padding: 17px 17px;
+  outline: none;
+}
+
+.signin-continer form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: 10px auto;
+  font-size: 20px;
+  border: none;
+  color: rgb(40, 39, 39);
+  background-color: chartreuse;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.signin-continer form button:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 10px 0px chartreuse;
+}
+.signin-continer form p {
+  color: red;
+  display: none;
+}
+.k {
+  width: 360px;
+  height: 530px;
+  background-color: rgb(29, 29, 30);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.k::before {
+  content: "";
+  position: absolute;
+  width: 470px;
+  height: 670px;
+  background-image: linear-gradient(
+    chartreuse,
+    chartreuse,
+    transparent,
+    transparent
+  );
+  top: -50%;
+  left: -50%;
+  animation-name: a;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.k::after {
+  content: "";
+  position: absolute;
+  width: 470px;
+  height: 670px;
+  background-image: linear-gradient(
+    chartreuse,
+    chartreuse,
+    transparent,
+    transparent
+  );
+  top: -50%;
+  left: -50%;
+  animation-name: a;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  animation-iteration-count: infinite;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+@keyframes a {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: bottom right;
+  }
+}
+header {
+  padding: 15px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-div a,
+.second-div a,
+.logout {
+  display: flex;
+  align-items: center;
+}
+header div {
+  display: flex;
+  text-decoration: none;
+}
+.first-div a {
+  font-weight: normal !important;
+  padding: 8px;
+  position: relative;
+  color: black !important;
+  overflow: hidden;
+  transition: 0.2s linear;
+}
+.first-div a:hover {
+  color: chartreuse !important;
+  background-color: rgba(40, 39, 39, 0.897);
+}
+.first-div a::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background-color: chartreuse;
+  transition: 0.2s linear;
+}
+.first-div a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background-color: chartreuse;
+}
+.first-div a,
+.second-div a,
+.logout {
+  margin-left: 30px;
+  font-size: 20px;
+}
+.second-div a,
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  width: 120px;
+  color: rgb(40, 39, 39);
+  background-color: chartreuse;
+  transition: 0.3s linear;
+}
+
+.second-div a:hover,
+.logout:hover {
+  transform: scale(1.01);
+  color: chartreuse;
+  background-color: rgb(40, 39, 39);
+  cursor: pointer;
+}
+.first-div a {
+  font-weight: bold;
+  color: rgb(40, 39, 39);
+}
+/*Cart*/
+.cartcontiner {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  height: calc(100% - 100px);
+  width: 330px;
+  background-color: rgb(100, 100, 100);
+  overflow-y: scroll;
+
+  position: fixed;
+  z-index: 999;
+  text-align: center;
+  border: 2px solid chartreuse;
+  display: none;
+  flex-direction: column;
+  transition: 0.2s linear;
+}
+.conbuy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+.conbuy div {
+  width: 150px;
+  background-color: chartreuse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.1s linear;
+}
+.conbuy div:hover {
+  background-color: rgb(40, 39, 39);
+  color: chartreuse;
+  cursor: pointer;
+}
+#tot {
+  margin: 10px 0 0 0;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  font-size: 17px;
+}
+.cartcontiner h1:not(tr h1) {
+  color: chartreuse;
+  margin: 5px 0 -15px 0;
+}
+.cartcontiner table {
+  width: 100% !important;
+}
+.cartcontiner table tr h1 {
+  font-size: 18px;
+}
+.cartcontiner table tr p {
+  font-size: 16px;
+}
+.home {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/src/images/p4.jpg");
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.home header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home header .first-div a {
+  color: white !important;
+}
+/*loading animation*/
+.load {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  height: 100vh;
+  align-items: center;
+}
+.ane1,
+.ane2,
+.ane3 {
+  margin-right: 100px;
+
+  position: absolute;
+
+  background-color: chartreuse;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.ane1 {
+  margin-left: 0px;
+}
+.ane2 {
+  margin-left: 100px;
+}
+.ane3 {
+  margin-left: 200px;
+}
+.ane1,
+.ane2,
+.ane3 {
+  animation-name: an;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.ane2 {
+  animation-delay: 0.5s;
+}
+.ane3 {
+  animation-delay: 0.8s;
+}
+@keyframes an {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+.home h1 {
+  color: white;
+  font-size: 50px;
+}
+/*cart table format*/
+
+/*btn delete element format*/
+.fa-trash {
+  font-size: 25px;
+  color: red;
+  margin-right: 10px;
+  border-radius: 3px;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.fa-trash:hover {
+  font-size: 25px;
+  transform: scale(1.1);
+  color: red;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+/*close cart icon format*/
+.close {
+  position: absolute;
+  top: 8px;
+  font-size: 30px;
+  right: 8px;
+  color: red;
+}
+.buy {
+  color: aliceblue;
+}
+.buy a {
+  color: var(--black);
+}
+.close:hover {
+  font-size: 31px;
+  color: rgb(214, 35, 35);
+  cursor: pointer;
+}
+@media (max-width: 850px) {
+  header {
+    padding: 10px 30px;
+  }
+  .second-div a,
+  .logout {
+    padding: 10px;
+    font-size: 17px;
+    width: 100px;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  .first-div a {
+    margin: 15px;
+    font-size: 17px;
+  }
+  .k,
+  form {
+    height: 100%;
+  }
+
+  .signin-continer form button {
+    padding: 10px;
+  }
+}
+@media (max-width: 450px) {
+  header {
+    padding: 10px 5px;
+  }
+  .second-div a,
+  .logout {
+    padding: 5px;
+    font-size: 17px;
+    width: 75px;
+  }
+  .logout {
+    width: 100px;
+  }
+  .first-div a {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    flex-direction: column;
+  }
+  .headbuttons {
+    justify-content: space-between;
+
+    width: 100%;
+  }
+  .cartcontiner {
+    top: 150px;
+    right: 2px;
+  }
+  .home h1 {
+    font-size: 40px;
+  }
+}
